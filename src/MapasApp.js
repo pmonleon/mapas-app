@@ -1,6 +1,7 @@
 
 import React /*, { useEffect, useMemo, useRef, useState } */ from 'react'
 import { MapPage } from './pages/MapPage'
+import { SocketProvider } from './context/SocketContext'
 //import mapboxgl from 'mapbox-gl';
 //import { getUserLocation } from './helpers/getUserLocation';
 
@@ -86,7 +87,9 @@ const MapasApp = () => {
             />
           </>
         )} */}
-        <MapPage  />
+         <SocketProvider>
+          <MapPage  />
+         </SocketProvider>
     </> 
   )
 }
